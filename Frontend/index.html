@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Find Papers - PaperHub</title>
+</head>
+<body>
+  <h2>Search Papers</h2>
+  <form id="paperForm">
+    <label>Semester:
+      <select name="semester" required>
+        <option value="">-- Select Semester --</option>
+        <option value="Sem 1">Sem 1</option>
+        <option value="Sem 2">Sem 2</option>
+        <option value="Sem 3">Sem 3</option>
+        <option value="Sem 4">Sem 4</option>
+        <option value="Sem 5">Sem 5</option>
+        <option value="Sem 6">Sem 6</option>
+        <option value="Sem 7">Sem 7</option>
+        <option value="Sem 8">Sem 8</option>
+      </select>
+    </label><br/><br/>
+
+    <label>Subject:
+      <input type="text" name="subject" required />
+    </label><br/><br/>
+
+    <label>Exam Type:
+      <select name="examType">
+        <option value="">-- Any --</option>
+        <option value="Midterm">Midterm</option>
+        <option value="Endterm">Endterm</option>
+        <option value="Makeup">Makeup</option>
+      </select>
+    </label><br/><br/>
+
+    <label>Year:
+      <input type="number" name="year" placeholder="Optional" />
+    </label><br/><br/>
+
+    <button type="submit">Search</button>
+  </form>
+
+  <h3>Results:</h3>
+  <ul id="resultsList"></ul>
+
+  <script src="js/index.js"></script>
+</body>
+</html>

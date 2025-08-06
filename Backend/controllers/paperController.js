@@ -7,10 +7,11 @@ export const uploadPaper = async (req, res) => {
 
   const { title, semester, subject, year, examType } = req.body;
 
+  console.log({ semester, subject });
   const paper = new Paper({
     title,
-    semester,
-    subject,
+    semester: semester.trim().replace(/['"]+/g, ''),
+    subject: subject.trim().replace(/['"]+/g, ''),
     year,
     examType,
     file: {

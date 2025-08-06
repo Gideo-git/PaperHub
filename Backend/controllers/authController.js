@@ -1,5 +1,7 @@
 import bcrypt from 'bcryptjs';
 import User from '../models/User.js';
+import jwt from 'jsonwebtoken';
+
 
 // Replace this with your actual list of allowed admin emails
 const ALLOWED_ADMIN_EMAILS = ['adithyanair74@gmail.com'];
