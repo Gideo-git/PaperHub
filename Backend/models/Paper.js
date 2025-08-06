@@ -1,13 +1,17 @@
-import mongoose from "mongoose";
-import User from "./user";
+import mongoose from 'mongoose';
 
-const paperSchema=new mongoose.Schema({
-  title:String,
-  semester:String,
-  subject:String,
-  fileUrl:String,
-  uploadedBy:{type:mongoose.Schema.Types.ObjectId,ref:User}
-},{timestamps:true});
+  const paperSchema = new mongoose.Schema({
+    title: String,
+    semester: String,
+    subject: String,
+    year: Number,
+    examType: String,
+    file: {
+      data: Buffer,
+      contentType: String,
+      originalName: String,
+    },
+    uploadedBy: { type: mongoose.Schema.Types.ObjectId, ref: 'User' },
+  }, { timestamps: true });
 
-const Paper=mongoose.model('Paper',paperSchema);
-export default Paper;
+export default mongoose.model('Paper', paperSchema);
