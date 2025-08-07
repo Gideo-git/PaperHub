@@ -1,6 +1,6 @@
 document.getElementById('registerForm').addEventListener('submit', async (e) => {
   e.preventDefault();
-
+//test
   const formData = new FormData(e.target);
   const data = {
     name: formData.get('name'),
