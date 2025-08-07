@@ -3,105 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Search Papers</title>
-    <link rel="stylesheet" href="style.css"> </head>
+    <title>Search Papers - PaperHub</title>
+    <link rel="stylesheet" href="style.css">
+</head>
 <body>
- <div class="container">
-        
-    <h1>Search Papers</h1>
+    <div class="container">
+        <div id="navbar"></div>
 
-    <form id="paperForm">
-        <div>
-            <label for="semesterSelect">Semester:</label>
-            <select name="semester" id="semesterSelect">
-                <option value="">-- Select Semester --</option>
-                <option value="1">Semester 1</option>
-                <option value="2">Semester 2</option>
-                <option value="3">Semester 3</option>
-                <option value="4">Semester 4</option>
-                <option value="5">Semester 5</option>
-                <option value="6">Semester 6</option>
-                <option value="7">Semester 7</option>
-                <option value="8">Semester 8</option>
-            </select>
-        </div>
+        <h1>Search Papers</h1>
+        <form id="paperForm">
+            <div>
+                <label for="semesterSelect">Semester:</label>
+                <select name="semester" id="semesterSelect">
+                    <option value="">-- Select Semester --</option>
+                    <option value="1">Semester 1</option>
+                    <option value="2">Semester 2</option>
+                    <option value="3">Semester 3</option>
+                    <option value="4">Semester 4</option>
+                    <option value="5">Semester 5</option>
+                    <option value="6">Semester 6</option>
+                    <option value="7">Semester 7</option>
+                    <option value="8">Semester 8</option>
+                </select>
+            </div>
+            <div>
+                <label for="subjectSelect">Subject:</label>
+                <select name="subject" id="subjectSelect">
+                    <option value="">-- Select Subject --</option>
+                </select>
+            </div>
+            <div>
+                <label for="examType">Exam Type:</label>
+                <select name="examType" id="examType">
+                    <option value="">-- Any --</option>
+                    <option value="Mid-Sem">Mid-Sem</option>
+                    <option value="End-Sem">End-Sem</option>
+                </select>
+            </div>
+            <div>
+                <label for="year">Year:</label>
+                <input type="text" name="year" id="year" placeholder="Optional">
+            </div>
+            <button type="submit">Search</button>
+        </form>
 
-        <div>
-            <label for="subjectSelect">Subject:</label>
-            <select name="subject" id="subjectSelect">
-                <option value="">-- Select Subject --</option>
-            </select>
-        </div>
-
-        <div>
-            <label for="examType">Exam Type:</label>
-            <select name="examType" id="examType">
-                <option value="">-- Any --</option>
-                <option value="Mid-Sem">Mid-Sem</option>
-                <option value="End-Sem">End-Sem</option>
-            </select>
-        </div>
-
-        <div>
-            <label for="year">Year:</label>
-            <input type="text" name="year" id="year" placeholder="Optional">
-        </div>
-
-        <button type="submit">Search</button>
-    </form>
-
-    <div id="adminUploadSection" style="display: none; margin-top: 40px; border-top: 2px solid #ccc; padding-top: 20px;">
-    <h2>Upload New Paper</h2>
-    <form id="uploadForm">
-        <div>
-            <label for="uploadSemester">Semester:</label>
-            <select id="uploadSemester" name="semester" required>
-                <option value="">-- Select Semester --</option>
-                <option value="1">Semester 1</option>
-                <option value="2">Semester 2</option>
-                <option value="3">Semester 3</option>
-                <option value="4">Semester 4</option>
-                <option value="5">Semester 5</option>
-                <option value="6">Semester 6</option>
-                <option value="7">Semester 7</option>
-                <option value="8">Semester 8</option>
-            </select>
-        </div>
-        <div>
-            <label for="uploadSubject">Subject:</label>
-            <input type="text" id="uploadSubject" name="subject" required>
-        </div>
-        <div>
-            <label for="uploadYear">Year:</label>
-            <input type="number" id="uploadYear" name="year" required placeholder="e.g., 2024">
-        </div>
-        <div>
-            <label for="uploadExamType">Exam Type:</label>
-            <select id="uploadExamType" name="examType" required>
-                <option value="">-- Select Type --</option>
-                <option value="Mid-Sem">Mid-Sem (MSE)</option>
-                <option value="End-Sem">End-Sem (ESE)</option>
-            </select>
-        </div>
-        <div>
-            <label for="uploadFile">File:</label>
-            <input type="file" id="uploadFile" name="file" required>
-        </div>
-        <button type="submit">Upload Paper</button>
-    </form>
-    <div id="uploadStatus" style="margin-top: 10px;"></div>
-</div>
-
-<form id="paperForm">
-    </form>
-
-    <h2>Results:</h2>
-    <ul id="resultsList">
-        </ul>
-<div style="margin-top: 50px; text-align: center;">
-        <button id="logoutButton">Logout</button>
+        <h2>Results:</h2>
+        <ul id="resultsList"></ul>
     </div>
-</div>
-    <script type="module" src="./js/index.js"></script>
+
+    <script type="module" src="js/index.js"></script>
+    <script type="module" src="js/nav.js"></script>
 </body>
 </html>

@@ -77,15 +77,11 @@ button {
 }
 
 button:hover {
-    background-color: #0056b3;
-}
-
-#logoutButton {
-    background-color: #dc3545; /* Red for logout/danger action */
+    background-color: #977575ff;
 }
 
 #logoutButton:hover {
-    background-color: #c82333;
+    background-color: #977575ff;
 }
 
 /* --- Specific Section Styling --- */
@@ -130,3 +126,30 @@ button:hover {
     border-radius: 5px;
     font-weight: 500;
 }
+
+
+/* Add this to the end of your style.css file */
+
+.main-nav {
+    display: flex;
+    gap: 20px;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #eee;
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: 600;
+    font-size: 18px;
+    padding: 5px 0;
+    border-bottom: 2px solid transparent;
+    transition: color 0.3s, border-bottom-color 0.3s;
+}
+
+.main-nav a:hover {
+    color: #0056b3;
+}
+
+/* Style for the active page link can be added with JavaScript if desired */
