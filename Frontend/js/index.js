@@ -108,7 +108,7 @@ document.getElementById('resultsList').addEventListener('click', async (e) => {
         }
 
         try {
-            const response = await fetch(`http://localhost:5000/api/papers/download/${paperId}`, {
+            const response = await fetch(`https://paperhub-backend-2025.onrender.com/api/papers/download/${paperId}`, {
                 headers: { 'Authorization': `Bearer ${token}` }
             });
 
