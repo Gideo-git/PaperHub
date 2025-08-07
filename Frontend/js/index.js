@@ -7,8 +7,8 @@ async function fetchSubjects(selectedSem) {
     const token = localStorage.getItem('token');
     try {
         const url = selectedSem
-            ? `https://paperhub-backend-2025.onrender.com/api/papers/subjects?semester=${encodeURIComponent(selectedSem)}`
-            : `https://paperhub-backend-2025.onrender.com/api/papers/subjects`;
+            ? `http://localhost:5000/api/papers/subjects?semester=${encodeURIComponent(selectedSem)}`
+            : `http://localhost:5000/api/papers/subjects`;
         
         const response = await fetch(url, {
             headers: { 'Authorization': `Bearer ${token}` },
@@ -64,7 +64,7 @@ document.getElementById('paperForm').addEventListener('submit', async (e) => {
     }
 
     try {
-        const response = await fetch(`https://paperhub-backend-2025.onrender.com/api/papers?${params.toString()}`, {
+        const response = await fetch(`http://localhost:5000/api/papers?${params.toString()}`, {
             headers: { 'Authorization': `Bearer ${token}` }
         });
 

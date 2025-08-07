@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             try {
                 // Point this to your live backend URL when deploying
-                const response = await fetch('https://paperhub-backend-2025.onrender.com/api/papers/upload', {
+                const response = await fetch('http://localhost:5000/api/papers/upload', {
                     method: 'POST',
                     headers: {
                         'Authorization': `Bearer ${token}`
