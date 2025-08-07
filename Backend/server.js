@@ -11,6 +11,12 @@ dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 5000;
 
+// Add this to server.js
+app.use((req, res, next) => {
+    console.log(`[SERVER] Request Received: ${req.method} ${req.originalUrl}`);
+    next();
+});
+
 app.use(cors());
 
 // Middleware
