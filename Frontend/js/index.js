@@ -1,7 +1,7 @@
 // Get elements from the HTML for the search form
 const semesterSelect = document.getElementById('semesterSelect');
 const subjectSelect = document.getElementById('subjectSelect');
-
+//shou;d be working now
 // --- Function to fetch subjects for the dropdown ---
 async function fetchSubjects(selectedSem) {
     const token = localStorage.getItem('token');
