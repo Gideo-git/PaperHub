@@ -7,10 +7,13 @@ import authRoute from './routes/authRoute.js';
 import cors from 'cors';
 
 dotenv.config();
-
+// Force a new deployment on Render
 const app = express();
+
 app.use(express.json());
-const PORT = process.env.PORT || 5000;
+//... rest of the file
+
+const PORT = 5000;
 
 // Add this to server.js
 app.use((req, res, next) => {
