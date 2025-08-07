@@ -5,7 +5,7 @@ import { decodeToken } from './utils/auth.js';
       const email = document.getElementById("email").value;
       const password = document.getElementById("password").value;
 
-      const res = await fetch("https://paperhub-backend-2025.onrender.com/api/auth/login", {
+      const res = await fetch("https://paperhub-gorr.onrender.com/api/auth/login", {
         method: "POST",
         headers: { "Content-Type": "application/  json" },
         body: JSON.stringify({ email, password }),

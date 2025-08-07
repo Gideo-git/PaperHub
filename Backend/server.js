@@ -6,26 +6,23 @@ import paperRoute from './routes/paperRoute.js';
 import authRoute from './routes/authRoute.js';
 import cors from 'cors';
 
+
 dotenv.config();
-// Force a new deployment on Render
+
 const app = express();
+const PORT = process.env.PORT || 5000;
 
+// 1. Enable Cross-Origin Resource Sharing (CORS) for all routes
+app.use(cors());
+
+// 2. Parse incoming JSON request bodies. This MUST come before your routes.
 app.use(express.json());
-//... rest of the file
 
-const PORT = 5000;
-
-// Add this to server.js
+// 3. Optional: Your logging middleware
 app.use((req, res, next) => {
     console.log(`[SERVER] Request Received: ${req.method} ${req.originalUrl}`);
     next();
 });
-
-app.use(cors());
-
-// Middleware
-app.use(express.json());
-
 
 
 // Routes
